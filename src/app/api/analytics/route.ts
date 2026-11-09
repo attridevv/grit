@@ -61,6 +61,7 @@ export async function GET() {
     // Readiness
     const latestReadiness = readiness[readiness.length - 1] ?? null;
     const prevReadiness = readiness[readiness.length - 2] ?? null;
+    const checkedInToday = latestReadiness ? latestReadiness.date.toDateString() === now.toDateString() : false;
     const readinessTrend = readiness.slice(-14).map((r) => ({
       day: r.date.toISOString().slice(5, 10),
       score: r.overall,
@@ -242,6 +243,7 @@ export async function GET() {
       predictionConfidence: raceResult.confidence,
       athleteRadar,
       user: { name: user.name, image: user.image },
+      checkedInToday,
       profile,
       readiness: {
         overall: latestReadiness?.overall ?? 0,
