@@ -6,6 +6,10 @@ An all-in-one training + nutrition + social platform that merges adaptive traini
 activity tracking, evidence-based nutrition coaching, and a social feed into a single
 data-rich dashboard.
 
+**Live:** https://gritier.attridevv.com
+
+![GRIT](https://attridevv.com/assets/work/grit.jpg)
+
 ## Stack
 
 - **Next.js 16** (App Router, Turbopack)
